@@ -11,5 +11,6 @@
     "tslint.exclude": "**/node_modules/**/*",
     "cSpell.words": [
         "definitelytyped"
-    ]
+    ],
+    "standard.enable": false
 }
