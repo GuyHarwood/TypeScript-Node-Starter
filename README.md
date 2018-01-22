@@ -14,36 +14,18 @@ git clone --depth=1 https://github.com/GuyHarwood/TypeScript-Node-Starter.git <p
 - Install dependencies
 ```
 cd <project_name>
-npm install
+yarn install
 ```
 
 ```
-npm run build
-npm start
+yarn build
+yarn start
 ```
 Navigate to `http://localhost:3000`
 
 # Origins
 This is a stripped back version of [Bowden Kellys TypeScript Node Starter project](https://github.com/Microsoft/TypeScript-Node-Starter)
-
-# TypeScript + Node 
-The main purpose of this repository is to show a good end-to-end project setup and workflow for writing Node code in TypeScript.
-I will try to keep this as up-to-date as possible, but community contributions and recommendations for improvements are encouraged and will be most welcome. 
-
-In the next few sections I will call out everything that changes when adding TypeScript to an Express project.
-Note that all of this has already been setup for this project, but feel free to use this as a reference for converting other Node.js project to TypeScript.
-
-> **Note on editors!** - TypeScript has great support in [every editor](http://www.typescriptlang.org/index.html#download-links), but this project has been pre-configured for use with [VS Code](https://code.visualstudio.com/). 
-Throughout the README I'll try to call out specific places where VS code really shines or where this project has been setup to take advantage of specific features.
-
-## Getting TypeScript
-TypeScript itself is simple to add to any project with `npm`.
-```
-npm install -D typescript
-```
-If you're using VS Code then you're good to go!
-VS Code will detect and use the TypeScript version you have installed in your `node_modules` folder. 
-For other editors, make sure you have the corresponding [TypeScript plugin](http://www.typescriptlang.org/index.html#download-links). 
+If you prefer to have passport, mongo and facebook auth integrated by default, consider using that instead.
 
 ## Project Structure
 The most obvious difference in a TypeScript + Node project is the folder structure.
@@ -78,10 +60,6 @@ The full folder structure of this app is explained below:
 | tsconfig.tests.json      | Config settings for compiling tests written in TypeScript                                     |
 | tslint.json              | Config settings for TSLint code style checking                                                |
 
-## Building the project
-It is rare for JavaScript projects not to have some kind of build pipeline these days, however Node projects typically have the least amount build configuration. 
-Because of this I've tried to keep the build as simple as possible.
-If you're concerned about compile time, the main watch task takes ~2s to refresh.
 
 ### Configuring TypeScript compilation
 TypeScript uses the file `tsconfig.json` to adjust project compile options.
@@ -167,11 +145,11 @@ Making sure that your `.d.ts` files are setup correctly is super important becau
 ### Installing `.d.ts` files from DefinitelyTyped
 For the most part, you'll find `.d.ts` files for the libraries you are using on DefinitelyTyped.
 These `.d.ts` files can be easily installed into your project by using the npm scope `@types`.
-For example, if we want the `.d.ts` file for jQuery, we can do so with `npm install --save-dev @types/jquery`.
+For example, if we want the `.d.ts` file for jQuery, we can do so with `yarn add --dev @types/jquery`.
 
-> **Note!** Be sure to add `--save-dev` (or `-D`) to your `npm install`. `.d.ts` files are project dependencies, but only used at compile time and thus should be dev dependencies.
+> **Note!** Be sure to add `--dev` (or `-D`) to your `yarn add`. `.d.ts` files are project dependencies, but only used at compile time and thus should be dev dependencies.
 
-In this template, all the `.d.ts` files have already been added to `devDependencies` in `package.json`, so you will get everything you need after running your first `npm install`.
+In this template, all the `.d.ts` files have already been added to `devDependencies` in `package.json`, so you will get everything you need after running your first `yarn install`.
 Once `.d.ts` files have been installed using npm, you should see them in your `node_modules/@types` folder. 
 The compiler will always look in this folder for `.d.ts` files when resolving JavaScript libraries.
 
@@ -294,7 +272,7 @@ While Mocha is probably more common, Mocha seems to be looking for a new maintai
 ### Install the components
 To add TypeScript + Jest support, first install a few npm packages:
 ```
-npm install -D jest ts-jest
+yarn add -D jest ts-jest
 ```
 `jest` is the testing framework itself, and `ts-jest` is just a simple function to make running TypeScript tests a little easier.
 
@@ -397,7 +375,7 @@ In that file you'll find two sections:
 | tslint                          | Linter (similar to ESLint) for TypeScript files                       |
 | typescript                      | JavaScript compiler/type checker that boosts JavaScript productivity  |
 
-To install or update these dependencies you can use `npm install` or `npm update`.
+To install or update these dependencies you can use `yarn install` or `npm update`.
 
 # Other
 Here is a section of miscellaneous tips. 
