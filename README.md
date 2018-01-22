@@ -4,29 +4,27 @@
 
 # Pre-reqs
 - Install [Node.js](https://nodejs.org/en/)
-- Install [MongoDB](https://docs.mongodb.com/manual/installation/)
 - Install [VS Code](https://code.visualstudio.com/)
 
 # Getting started
 - Clone the repository
 ```
-git clone --depth=1 https://github.com/Microsoft/TypeScript-Node-Starter.git <project_name>
+git clone --depth=1 https://github.com/GuyHarwood/TypeScript-Node-Starter.git <project_name>
 ```
 - Install dependencies
 ```
 cd <project_name>
 npm install
 ```
-- Start your mongoDB server (you'll probably want another command prompt)
-```
-mongod
-```
-- Build and run the project
+
 ```
 npm run build
 npm start
 ```
 Navigate to `http://localhost:3000`
+
+# Origins
+This is a stripped back version of [Bowden Kellys TypeScript Node Starter project](https://github.com/Microsoft/TypeScript-Node-Starter)
 
 # TypeScript + Node 
 The main purpose of this repository is to show a good end-to-end project setup and workflow for writing Node code in TypeScript.
@@ -362,7 +360,6 @@ To enhance your development experience while working in VSCode we also provide y
 
 - [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-- [Azure Cosmos DB](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)
 
 # Dependencies
 Dependencies are managed through `package.json`.
@@ -382,14 +379,9 @@ In that file you'll find two sections:
 | express-flash                   | Provides flash messages for Express.                                  |
 | express-session                 | Express 4 middleware.                                                 |
 | express-validator               | Easy form validation for Express.                                     |
-| fbgraph                         | Facebook Graph API library.                                           |
 | lusca                           | CSRF middleware.                                                      |
-| mongoose                        | MongoDB ODM.                                                          |
 | morgan                          | Express 4 middleware.                                                 |
 | nodemailer                      | Node.js library for sending emails.                                   |
-| passport                        | Simple and elegant authentication library for node.js                 |
-| passport-facebook               | Sign-in with Facebook plugin.                                         |
-| passport-local                  | Sign-in with Username and Password plugin.                            |
 | pug (jade)				      | Template engine for Express.                                          |
 | request                         | Simplified HTTP request library.                                      |
 
