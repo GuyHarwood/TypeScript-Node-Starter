@@ -1,4 +1,4 @@
-# TypeScript Node Starter
+# TypeScript Node Express Skeleton project
 
 [![CircleCI](https://circleci.com/gh/GuyHarwood/TypeScript-Node-Starter.svg?style=svg)](https://circleci.com/gh/GuyHarwood/TypeScript-Node-Starter)
 
