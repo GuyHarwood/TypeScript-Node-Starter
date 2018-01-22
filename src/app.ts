@@ -26,7 +26,7 @@ app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "pug");
 app.use(session({
   name: "default.sid",
-  secret: "Developer_Session_Secret",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   rolling: true,
   saveUninitialized: false,
